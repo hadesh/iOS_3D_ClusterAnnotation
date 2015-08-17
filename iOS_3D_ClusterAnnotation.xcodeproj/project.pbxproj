@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		747B943F1B4688AE00474F78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B943E1B4688AE00474F78 /* main.m */; };
+		747B94421B4688AE00474F78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B94411B4688AE00474F78 /* AppDelegate.m */; };
+		747B944A1B4688AE00474F78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747B94491B4688AE00474F78 /* Images.xcassets */; };
+		747B944D1B4688AE00474F78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747B944B1B4688AE00474F78 /* LaunchScreen.xib */; };
+		747B94591B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B94581B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m */; };
+		74F463F41B4A1471001B55AA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 74F463F21B4A1471001B55AA /* images */; };
+		74F463F51B4A1471001B55AA /* offline in Resources */ = {isa = PBXBuildFile; fileRef = 74F463F31B4A1471001B55AA /* offline */; };
+		74F464061B4A1C9E001B55AA /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74F464051B4A1C9E001B55AA /* AMap.bundle */; };
+		74F4645A1B4A2B57001B55AA /* ClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464521B4A2B57001B55AA /* ClusterAnnotation.m */; };
+		74F4645B1B4A2B57001B55AA /* CoordinateQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464541B4A2B57001B55AA /* CoordinateQuadTree.m */; };
+		74F4645C1B4A2B57001B55AA /* QuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464561B4A2B57001B55AA /* QuadTree.m */; };
+		74F4645D1B4A2B57001B55AA /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464591B4A2B57001B55AA /* ClusterAnnotationView.m */; };
+		74F464661B4A2B82001B55AA /* AnnotationClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464611B4A2B82001B55AA /* AnnotationClusterViewController.m */; };
+		74F464671B4A2B82001B55AA /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464631B4A2B82001B55AA /* BaseMapViewController.m */; };
+		74F464681B4A2B82001B55AA /* PoiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464651B4A2B82001B55AA /* PoiDetailViewController.m */; };
+		74F464691B4A2E1B001B55AA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4644D1B4A2095001B55AA /* Security.framework */; };
+		74F4646A1B4A2E1B001B55AA /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4644B1B4A2088001B55AA /* libstdc++.6.0.9.dylib */; };
+		74F4646B1B4A2E1B001B55AA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464491B4A207C001B55AA /* libz.dylib */; };
+		74F4646C1B4A2E1B001B55AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464471B4A206C001B55AA /* SystemConfiguration.framework */; };
+		74F4646D1B4A2E1B001B55AA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464131B4A1D2F001B55AA /* CoreTelephony.framework */; };
+		74F4646E1B4A2E1B001B55AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464111B4A1D27001B55AA /* CoreLocation.framework */; };
+		74F4646F1B4A2E1B001B55AA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4640F1B4A1D1E001B55AA /* OpenGLES.framework */; };
+		74F464701B4A2E1B001B55AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4640D1B4A1D0D001B55AA /* QuartzCore.framework */; };
+		74F464711B4A2E1B001B55AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */; };
+		74F464721B4A2E1B001B55AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464091B4A1CF2001B55AA /* Foundation.framework */; };
+		74F464731B4A2E1B001B55AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464071B4A1CE8001B55AA /* UIKit.framework */; };
+		74F464891B4BCCFE001B55AA /* ClusterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464871B4BCCFE001B55AA /* ClusterTableViewCell.m */; };
+		74F464BF1B4D1181001B55AA /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464BD1B4D1181001B55AA /* AMapSearchKit.framework */; };
+		74F464C01B4D1181001B55AA /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464BE1B4D1181001B55AA /* MAMapKit.framework */; };
+		74F464C51B4E11D2001B55AA /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464C41B4E11D2001B55AA /* CustomCalloutView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		747B94531B4688AE00474F78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 747B94311B4688AE00474F78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 747B94381B4688AE00474F78;
+			remoteInfo = iOS_3D_ClusterAnnotation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		747B94391B4688AE00474F78 /* iOS_3D_ClusterAnnotation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_3D_ClusterAnnotation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		747B943D1B4688AE00474F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		747B943E1B4688AE00474F78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		747B94401B4688AE00474F78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		747B94411B4688AE00474F78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		747B94491B4688AE00474F78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		747B944C1B4688AE00474F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		747B94521B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_3D_ClusterAnnotationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		747B94571B4688AE00474F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		747B94581B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_3D_ClusterAnnotationTests.m; sourceTree = "<group>"; };
+		74F463F21B4A1471001B55AA /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		74F463F31B4A1471001B55AA /* offline */ = {isa = PBXFileReference; lastKnownFileType = folder; path = offline; sourceTree = "<group>"; };
+		74F463F71B4A14BE001B55AA /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		74F464051B4A1C9E001B55AA /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		74F464071B4A1CE8001B55AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74F464091B4A1CF2001B55AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74F4640D1B4A1D0D001B55AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		74F4640F1B4A1D1E001B55AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		74F464111B4A1D27001B55AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		74F464131B4A1D2F001B55AA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		74F464471B4A206C001B55AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		74F464491B4A207C001B55AA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		74F4644B1B4A2088001B55AA /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		74F4644D1B4A2095001B55AA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		74F464511B4A2B57001B55AA /* ClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotation.h; sourceTree = "<group>"; };
+		74F464521B4A2B57001B55AA /* ClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotation.m; sourceTree = "<group>"; };
+		74F464531B4A2B57001B55AA /* CoordinateQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateQuadTree.h; sourceTree = "<group>"; };
+		74F464541B4A2B57001B55AA /* CoordinateQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQuadTree.m; sourceTree = "<group>"; };
+		74F464551B4A2B57001B55AA /* QuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadTree.h; sourceTree = "<group>"; };
+		74F464561B4A2B57001B55AA /* QuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadTree.m; sourceTree = "<group>"; };
+		74F464581B4A2B57001B55AA /* ClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotationView.h; sourceTree = "<group>"; };
+		74F464591B4A2B57001B55AA /* ClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotationView.m; sourceTree = "<group>"; };
+		74F464601B4A2B82001B55AA /* AnnotationClusterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationClusterViewController.h; sourceTree = "<group>"; };
+		74F464611B4A2B82001B55AA /* AnnotationClusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationClusterViewController.m; sourceTree = "<group>"; };
+		74F464621B4A2B82001B55AA /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
+		74F464631B4A2B82001B55AA /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
+		74F464641B4A2B82001B55AA /* PoiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiDetailViewController.h; sourceTree = "<group>"; };
+		74F464651B4A2B82001B55AA /* PoiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiDetailViewController.m; sourceTree = "<group>"; };
+		74F464861B4BCCFE001B55AA /* ClusterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterTableViewCell.h; sourceTree = "<group>"; };
+		74F464871B4BCCFE001B55AA /* ClusterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterTableViewCell.m; sourceTree = "<group>"; };
+		74F464BD1B4D1181001B55AA /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		74F464BE1B4D1181001B55AA /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		74F464C31B4E11D2001B55AA /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		74F464C41B4E11D2001B55AA /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		747B94361B4688AE00474F78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F464691B4A2E1B001B55AA /* Security.framework in Frameworks */,
+				74F4646A1B4A2E1B001B55AA /* libstdc++.6.0.9.dylib in Frameworks */,
+				74F4646B1B4A2E1B001B55AA /* libz.dylib in Frameworks */,
+				74F4646C1B4A2E1B001B55AA /* SystemConfiguration.framework in Frameworks */,
+				74F4646D1B4A2E1B001B55AA /* CoreTelephony.framework in Frameworks */,
+				74F4646E1B4A2E1B001B55AA /* CoreLocation.framework in Frameworks */,
+				74F4646F1B4A2E1B001B55AA /* OpenGLES.framework in Frameworks */,
+				74F464701B4A2E1B001B55AA /* QuartzCore.framework in Frameworks */,
+				74F464BF1B4D1181001B55AA /* AMapSearchKit.framework in Frameworks */,
+				74F464711B4A2E1B001B55AA /* CoreGraphics.framework in Frameworks */,
+				74F464721B4A2E1B001B55AA /* Foundation.framework in Frameworks */,
+				74F464C01B4D1181001B55AA /* MAMapKit.framework in Frameworks */,
+				74F464731B4A2E1B001B55AA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		747B944F1B4688AE00474F78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		747B94301B4688AE00474F78 = {
+			isa = PBXGroup;
+			children = (
+				747B943B1B4688AE00474F78 /* iOS_3D_ClusterAnnotation */,
+				747B94551B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests */,
+				747B943A1B4688AE00474F78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		747B943A1B4688AE00474F78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				747B94391B4688AE00474F78 /* iOS_3D_ClusterAnnotation.app */,
+				747B94521B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		747B943B1B4688AE00474F78 /* iOS_3D_ClusterAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				74F4644F1B4A2B57001B55AA /* ClusterAnnotation */,
+				74F4645E1B4A2B82001B55AA /* Demo */,
+				747B94401B4688AE00474F78 /* AppDelegate.h */,
+				747B94411B4688AE00474F78 /* AppDelegate.m */,
+				747B94491B4688AE00474F78 /* Images.xcassets */,
+				747B944B1B4688AE00474F78 /* LaunchScreen.xib */,
+				74F463F61B4A14BE001B55AA /* Configuration */,
+				747B943C1B4688AE00474F78 /* Supporting Files */,
+			);
+			path = iOS_3D_ClusterAnnotation;
+			sourceTree = "<group>";
+		};
+		747B943C1B4688AE00474F78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74F464041B4A1C9E001B55AA /* Resources */,
+				74F463F21B4A1471001B55AA /* images */,
+				74F463F31B4A1471001B55AA /* offline */,
+				747B943D1B4688AE00474F78 /* Info.plist */,
+				747B943E1B4688AE00474F78 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		747B94551B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests */ = {
+			isa = PBXGroup;
+			children = (
+				747B94581B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m */,
+				747B94561B4688AE00474F78 /* Supporting Files */,
+			);
+			path = iOS_3D_ClusterAnnotationTests;
+			sourceTree = "<group>";
+		};
+		747B94561B4688AE00474F78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				747B94571B4688AE00474F78 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74F463F61B4A14BE001B55AA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74F463F71B4A14BE001B55AA /* APIKey.h */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		74F464041B4A1C9E001B55AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74F464BD1B4D1181001B55AA /* AMapSearchKit.framework */,
+				74F464BE1B4D1181001B55AA /* MAMapKit.framework */,
+				74F4644D1B4A2095001B55AA /* Security.framework */,
+				74F4644B1B4A2088001B55AA /* libstdc++.6.0.9.dylib */,
+				74F464491B4A207C001B55AA /* libz.dylib */,
+				74F464471B4A206C001B55AA /* SystemConfiguration.framework */,
+				74F464131B4A1D2F001B55AA /* CoreTelephony.framework */,
+				74F464111B4A1D27001B55AA /* CoreLocation.framework */,
+				74F4640F1B4A1D1E001B55AA /* OpenGLES.framework */,
+				74F4640D1B4A1D0D001B55AA /* QuartzCore.framework */,
+				74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */,
+				74F464091B4A1CF2001B55AA /* Foundation.framework */,
+				74F464071B4A1CE8001B55AA /* UIKit.framework */,
+				74F464051B4A1C9E001B55AA /* AMap.bundle */,
+			);
+			name = Resources;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		74F4644F1B4A2B57001B55AA /* ClusterAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				74F464501B4A2B57001B55AA /* Model */,
+				74F464571B4A2B57001B55AA /* View */,
+			);
+			path = ClusterAnnotation;
+			sourceTree = "<group>";
+		};
+		74F464501B4A2B57001B55AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74F464511B4A2B57001B55AA /* ClusterAnnotation.h */,
+				74F464521B4A2B57001B55AA /* ClusterAnnotation.m */,
+				74F464531B4A2B57001B55AA /* CoordinateQuadTree.h */,
+				74F464541B4A2B57001B55AA /* CoordinateQuadTree.m */,
+				74F464551B4A2B57001B55AA /* QuadTree.h */,
+				74F464561B4A2B57001B55AA /* QuadTree.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74F464571B4A2B57001B55AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74F464581B4A2B57001B55AA /* ClusterAnnotationView.h */,
+				74F464591B4A2B57001B55AA /* ClusterAnnotationView.m */,
+				74F464861B4BCCFE001B55AA /* ClusterTableViewCell.h */,
+				74F464871B4BCCFE001B55AA /* ClusterTableViewCell.m */,
+				74F464C31B4E11D2001B55AA /* CustomCalloutView.h */,
+				74F464C41B4E11D2001B55AA /* CustomCalloutView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74F4645E1B4A2B82001B55AA /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				74F4645F1B4A2B82001B55AA /* Controller */,
+			);
+			name = Demo;
+			path = ClusterAnnotation/Demo;
+			sourceTree = "<group>";
+		};
+		74F4645F1B4A2B82001B55AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74F464601B4A2B82001B55AA /* AnnotationClusterViewController.h */,
+				74F464611B4A2B82001B55AA /* AnnotationClusterViewController.m */,
+				74F464621B4A2B82001B55AA /* BaseMapViewController.h */,
+				74F464631B4A2B82001B55AA /* BaseMapViewController.m */,
+				74F464641B4A2B82001B55AA /* PoiDetailViewController.h */,
+				74F464651B4A2B82001B55AA /* PoiDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		747B94381B4688AE00474F78 /* iOS_3D_ClusterAnnotation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 747B945C1B4688AE00474F78 /* Build configuration list for PBXNativeTarget "iOS_3D_ClusterAnnotation" */;
+			buildPhases = (
+				747B94351B4688AE00474F78 /* Sources */,
+				747B94361B4688AE00474F78 /* Frameworks */,
+				747B94371B4688AE00474F78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOS_3D_ClusterAnnotation;
+			productName = iOS_3D_ClusterAnnotation;
+			productReference = 747B94391B4688AE00474F78 /* iOS_3D_ClusterAnnotation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		747B94511B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 747B945F1B4688AE00474F78 /* Build configuration list for PBXNativeTarget "iOS_3D_ClusterAnnotationTests" */;
+			buildPhases = (
+				747B944E1B4688AE00474F78 /* Sources */,
+				747B944F1B4688AE00474F78 /* Frameworks */,
+				747B94501B4688AE00474F78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				747B94541B4688AE00474F78 /* PBXTargetDependency */,
+			);
+			name = iOS_3D_ClusterAnnotationTests;
+			productName = iOS_3D_ClusterAnnotationTests;
+			productReference = 747B94521B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		747B94311B4688AE00474F78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = FENGSHENG;
+				TargetAttributes = {
+					747B94381B4688AE00474F78 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					747B94511B4688AE00474F78 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 747B94381B4688AE00474F78;
+					};
+				};
+			};
+			buildConfigurationList = 747B94341B4688AE00474F78 /* Build configuration list for PBXProject "iOS_3D_ClusterAnnotation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 747B94301B4688AE00474F78;
+			productRefGroup = 747B943A1B4688AE00474F78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				747B94381B4688AE00474F78 /* iOS_3D_ClusterAnnotation */,
+				747B94511B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		747B94371B4688AE00474F78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F464061B4A1C9E001B55AA /* AMap.bundle in Resources */,
+				74F463F51B4A1471001B55AA /* offline in Resources */,
+				74F463F41B4A1471001B55AA /* images in Resources */,
+				747B944D1B4688AE00474F78 /* LaunchScreen.xib in Resources */,
+				747B944A1B4688AE00474F78 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		747B94501B4688AE00474F78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		747B94351B4688AE00474F78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F464C51B4E11D2001B55AA /* CustomCalloutView.m in Sources */,
+				74F464661B4A2B82001B55AA /* AnnotationClusterViewController.m in Sources */,
+				74F4645D1B4A2B57001B55AA /* ClusterAnnotationView.m in Sources */,
+				74F4645C1B4A2B57001B55AA /* QuadTree.m in Sources */,
+				747B94421B4688AE00474F78 /* AppDelegate.m in Sources */,
+				74F464891B4BCCFE001B55AA /* ClusterTableViewCell.m in Sources */,
+				747B943F1B4688AE00474F78 /* main.m in Sources */,
+				74F464681B4A2B82001B55AA /* PoiDetailViewController.m in Sources */,
+				74F4645A1B4A2B57001B55AA /* ClusterAnnotation.m in Sources */,
+				74F464671B4A2B82001B55AA /* BaseMapViewController.m in Sources */,
+				74F4645B1B4A2B57001B55AA /* CoordinateQuadTree.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		747B944E1B4688AE00474F78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747B94591B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		747B94541B4688AE00474F78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 747B94381B4688AE00474F78 /* iOS_3D_ClusterAnnotation */;
+			targetProxy = 747B94531B4688AE00474F78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		747B944B1B4688AE00474F78 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				747B944C1B4688AE00474F78 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		747B945A1B4688AE00474F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		747B945B1B4688AE00474F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		747B945D1B4688AE00474F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pcuser/Downloads,
+					"$(PROJECT_DIR)/Resources",
+				);
+				INFOPLIST_FILE = iOS_3D_ClusterAnnotation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		747B945E1B4688AE00474F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pcuser/Downloads,
+					"$(PROJECT_DIR)/Resources",
+				);
+				INFOPLIST_FILE = iOS_3D_ClusterAnnotation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		747B94601B4688AE00474F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iOS_3D_ClusterAnnotationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS_3D_ClusterAnnotation.app/iOS_3D_ClusterAnnotation";
+			};
+			name = Debug;
+		};
+		747B94611B4688AE00474F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iOS_3D_ClusterAnnotationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS_3D_ClusterAnnotation.app/iOS_3D_ClusterAnnotation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		747B94341B4688AE00474F78 /* Build configuration list for PBXProject "iOS_3D_ClusterAnnotation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				747B945A1B4688AE00474F78 /* Debug */,
+				747B945B1B4688AE00474F78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		747B945C1B4688AE00474F78 /* Build configuration list for PBXNativeTarget "iOS_3D_ClusterAnnotation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				747B945D1B4688AE00474F78 /* Debug */,
+				747B945E1B4688AE00474F78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		747B945F1B4688AE00474F78 /* Build configuration list for PBXNativeTarget "iOS_3D_ClusterAnnotationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				747B94601B4688AE00474F78 /* Debug */,
+				747B94611B4688AE00474F78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 747B94311B4688AE00474F78 /* Project object */;
+}
