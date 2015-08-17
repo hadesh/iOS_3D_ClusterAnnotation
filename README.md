@@ -139,4 +139,3 @@ dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
 ![ClusterAnnotation2](https://raw.githubusercontent.com/cysgit/iOS_3D_ClusterAnnotation/master/iOS_3D_ClusterAnnotation/Resources/ClusterAnnotation2.png)
 ![ClusterAnnotation1](https://raw.githubusercontent.com/cysgit/iOS_3D_ClusterAnnotation/master/iOS_3D_ClusterAnnotation/Resources/ClusterAnnotation1.png)
-### 在线安装Demo
