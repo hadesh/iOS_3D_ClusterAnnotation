@@ -44,6 +44,7 @@ const NSInteger kCellHeight = 44;
 
 - (void)dismissCalloutView
 {
+    self.poiArray = nil;
     [self removeFromSuperview];
 }
 

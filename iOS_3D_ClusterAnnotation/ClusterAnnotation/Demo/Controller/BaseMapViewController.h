@@ -13,7 +13,7 @@
 @interface BaseMapViewController : UIViewController<MAMapViewDelegate, AMapSearchDelegate>
 
 @property (nonatomic, strong) MAMapView *mapView;
-
 @property (nonatomic, strong) AMapSearchAPI *search;
+@property (nonatomic, strong) UIButton *refreshButton;
 
 @end
