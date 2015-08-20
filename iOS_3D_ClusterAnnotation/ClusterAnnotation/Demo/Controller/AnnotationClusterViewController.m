@@ -26,6 +26,8 @@
 
 @property (nonatomic, assign) BOOL shouldRegionChangeReCalculate;
 
+@property (nonatomic, strong) AMapPlaceSearchRequest *currentRequest;
+
 @end
 
 @implementation AnnotationClusterViewController
@@ -61,24 +63,25 @@
 
 - (void)addAnnotationsToMapView:(MAMapView *)mapView
 {
-    NSLog(@"calculate annotations.");
-    if (self.coordinateQuadTree.root == nil || !_shouldRegionChangeReCalculate)
+    @synchronized(self)
     {
-        NSLog(@"tree is not ready.");
-        return;
-    }
-
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        /* 根据当前zoomLevel和zoomScale 进行annotation聚合. */
-        double zoomScale = self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width;
+        if (self.coordinateQuadTree.root == nil || !self.shouldRegionChangeReCalculate)
+        {
+            NSLog(@"tree is not ready.");
+            return;
+        }
         
-        NSArray *annotations = [self.coordinateQuadTree clusteredAnnotationsWithinMapRect:mapView.visibleMapRect
-                                                                            withZoomScale:zoomScale
-                                                                             andZoomLevel:mapView.zoomLevel];
-        /* 更新annotation. */
-        [self updateMapViewAnnotationsWithAnnotations:annotations];
-    });
-    
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            /* 根据当前zoomLevel和zoomScale 进行annotation聚合. */
+            double zoomScale = self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width;
+            
+            NSArray *annotations = [self.coordinateQuadTree clusteredAnnotationsWithinMapRect:mapView.visibleMapRect
+                                                                                withZoomScale:zoomScale
+                                                                                 andZoomLevel:mapView.zoomLevel];
+            /* 更新annotation. */
+            [self updateMapViewAnnotationsWithAnnotations:annotations];
+        });
+    }
 }
 
 #pragma mark - CustomCalloutViewTapDelegate
@@ -108,7 +111,7 @@
     {
         [self.selectedPoiArray addObject:poi];
     }
-
+    
     [self.customCalloutView setPoiArray:self.selectedPoiArray];
     self.customCalloutView.delegate = self;
     
@@ -120,10 +123,7 @@
 
 - (void)mapView:(MAMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    @synchronized(self)
-    {
-        [self addAnnotationsToMapView:self.mapView];
-    }
+    [self addAnnotationsToMapView:self.mapView];
 }
 
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
@@ -166,6 +166,7 @@
     request.city                = @[@"010"];
     request.requireExtension    = YES;
     
+    self.currentRequest = request;
     [self.search AMapPlaceSearch:request];
 }
 
@@ -177,9 +178,15 @@
         return;
     }
     
+    // 只处理最新的请求
+    if (request != self.currentRequest)
+    {
+        return;
+    }
+    
     @synchronized(self)
     {
-        _shouldRegionChangeReCalculate = NO;
+        self.shouldRegionChangeReCalculate = NO;
         
         // 清理
         [self.selectedPoiArray removeAllObjects];
@@ -189,22 +196,22 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             /* 建立四叉树. */
             [self.coordinateQuadTree buildTreeWithPOIs:respons.pois];
-            _shouldRegionChangeReCalculate = YES;
+            self.shouldRegionChangeReCalculate = YES;
             
             [self addAnnotationsToMapView:self.mapView];
         });
     }
-
-//    /* 如果只有一个结果，设置其为中心点. */
-//    if (respons.pois.count == 1)
-//    {
-//        self.mapView.centerCoordinate = [respons.pois[0] coordinate];
-//    }
-//    /* 如果有多个结果, 设置地图使所有的annotation都可见. */
-//    else
-//    {
-//        [self.mapView showAnnotations:self.mapView.annotations animated:NO];
-//    }
+    
+    //    /* 如果只有一个结果，设置其为中心点. */
+    //    if (respons.pois.count == 1)
+    //    {
+    //        self.mapView.centerCoordinate = [respons.pois[0] coordinate];
+    //    }
+    //    /* 如果有多个结果, 设置地图使所有的annotation都可见. */
+    //    else
+    //    {
+    //        [self.mapView showAnnotations:self.mapView.annotations animated:NO];
+    //    }
 }
 
 #pragma mark - Life Cycle

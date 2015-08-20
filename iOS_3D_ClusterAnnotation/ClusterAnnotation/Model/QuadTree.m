@@ -143,7 +143,7 @@ void QuadTreeGatherDataInRange(QuadTreeNode* node, BoundingBox range, DataReturn
     QuadTreeGatherDataInRange(node->northEast, range, block);
     QuadTreeGatherDataInRange(node->southWest, range, block);
     QuadTreeGatherDataInRange(node->southEast, range, block);
-
+    
 }
 
 void FreeQuadTreeNode(QuadTreeNode* node)
@@ -155,7 +155,8 @@ void FreeQuadTreeNode(QuadTreeNode* node)
     
     for (int i=0; i < node->pointsCount; i++)
     {
-        free(node->points[i].data);
+        //        free(node->points[i].data);
+        CFRelease(node->points[i].data);
     }
     free(node->points);
     free(node);
