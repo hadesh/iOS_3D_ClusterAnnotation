@@ -26,7 +26,7 @@
 
 @property (nonatomic, assign) BOOL shouldRegionChangeReCalculate;
 
-@property (nonatomic, strong) AMapPlaceSearchRequest *currentRequest;
+@property (nonatomic, strong) AMapPOIKeywordsSearchRequest *currentRequest;
 
 @end
 
@@ -159,21 +159,21 @@
 /* 搜索POI. */
 - (void)searchPoiWithKeyword:(NSString *)keyword
 {
-    AMapPlaceSearchRequest *request = [[AMapPlaceSearchRequest alloc] init];
+    AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc] init];
     
-    request.searchType          = AMapSearchType_PlaceKeyword;
     request.keywords            = keyword;
-    request.city                = @[@"010"];
+    request.city                = @"010";
     request.requireExtension    = YES;
     
     self.currentRequest = request;
-    [self.search AMapPlaceSearch:request];
+    [self.search AMapPOIKeywordsSearch:request];
 }
 
 /* POI 搜索回调. */
-- (void)onPlaceSearchDone:(AMapPlaceSearchRequest *)request response:(AMapPlaceSearchResponse *)respons
+
+- (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
 {
-    if (respons.pois.count == 0)
+    if (response.pois.count == 0)
     {
         return;
     }
@@ -195,23 +195,13 @@
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             /* 建立四叉树. */
-            [self.coordinateQuadTree buildTreeWithPOIs:respons.pois];
+            [self.coordinateQuadTree buildTreeWithPOIs:response.pois];
             self.shouldRegionChangeReCalculate = YES;
             
             [self addAnnotationsToMapView:self.mapView];
         });
     }
-    
-    //    /* 如果只有一个结果，设置其为中心点. */
-    //    if (respons.pois.count == 1)
-    //    {
-    //        self.mapView.centerCoordinate = [respons.pois[0] coordinate];
-    //    }
-    //    /* 如果有多个结果, 设置地图使所有的annotation都可见. */
-    //    else
-    //    {
-    //        [self.mapView showAnnotations:self.mapView.annotations animated:NO];
-    //    }
+
 }
 
 #pragma mark - Life Cycle

@@ -67,7 +67,7 @@
 
 - (void)initSearch
 {
-    self.search = [[AMapSearchAPI alloc] initWithSearchKey:[MAMapServices sharedServices].apiKey Delegate:nil];
+    self.search = [[AMapSearchAPI alloc] init];
     self.search.delegate = self;
 }
 

@@ -106,7 +106,6 @@
             case 13 : subTitle = TemporaryNotOpened;            break;
             case 14 : subTitle = self.poi.direction;            break;
             case 15 : subTitle = [NSString stringWithFormat:@"%d", self.poi.hasIndoorMap];                                              break;
-            case 16 : subTitle = self.poi.indoorMapProvider;    break;
             default : break;
         }
     }

@@ -30,6 +30,7 @@
     }
     
     [MAMapServices sharedServices].apiKey = (NSString *)APIKey;
+    [AMapSearchServices sharedServices].apiKey = (NSString *)APIKey;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
