@@ -28,8 +28,8 @@
 /// 经纬度
 @interface AMapGeoPoint : AMapSearchObject<NSCopying>
 
-@property (nonatomic, assign) CGFloat latitude;
-@property (nonatomic, assign) CGFloat longitude;
+@property (nonatomic, assign) CGFloat latitude; //!< 纬度（垂直方向）
+@property (nonatomic, assign) CGFloat longitude; //!< 经度（水平方向）
 
 + (AMapGeoPoint *)locationWithLatitude:(CGFloat)lat longitude:(CGFloat)lon;
 
@@ -47,6 +47,8 @@
 
 @end
 
+@class AMapDistrict;
+
 /// 城市
 @interface AMapCity : AMapSearchObject
 
@@ -54,15 +56,15 @@
 @property (nonatomic, copy)   NSString  *citycode; //!< 城市编码
 @property (nonatomic, copy)   NSString  *adcode; //!< 城市区域编码
 @property (nonatomic, assign) NSInteger  num;   //!< 此区域的建议结果数目,AMapSuggestion中使用
-@property (nonatomic, strong) NSArray   *districts; //!< 途径区域 AMapDistrict 数组，AMepStep中使用
+@property (nonatomic, strong) NSArray<AMapDistrict *> *districts; //!< 途径区域 AMapDistrict 数组，AMepStep中使用，只有name和adcode。
 
 @end
 
 /// 建议信息
 @interface AMapSuggestion : AMapSearchObject
 
-@property (nonatomic, strong) NSArray *keywords; //!< NSString 数组
-@property (nonatomic, strong) NSArray *cities; //!< AMapCity 数组
+@property (nonatomic, strong) NSArray<NSString *> *keywords; //!< NSString 数组
+@property (nonatomic, strong) NSArray<AMapCity *> *cities; //!< AMapCity 数组
 
 @end
 
@@ -75,11 +77,33 @@
 @property (nonatomic, copy) NSString     *name; //!< 名称
 @property (nonatomic, copy) NSString     *adcode; //!< 区域编码
 @property (nonatomic, copy) NSString     *district; //!< 所属区域
+@property (nonatomic, copy) NSString     *address; //!< 地址
 @property (nonatomic, copy) AMapGeoPoint *location; //!< 位置
 
 @end
 
 #pragma mark - POI
+
+@interface AMapIndoorData : AMapSearchObject
+
+@property (nonatomic, assign) NSInteger floor; //!< 楼层，为0时为POI本身。
+@property (nonatomic, copy)   NSString  *floorName; //!< 楼层名称。
+@property (nonatomic, copy)   NSString  *pid; //!< 父ID
+
+@end
+
+/// 子POI
+@interface AMapSubPOI : AMapSearchObject
+
+@property (nonatomic, copy)   NSString     *uid; //!< POI全局唯一ID
+@property (nonatomic, copy)   NSString     *name; //!< 名称
+@property (nonatomic, copy)   NSString     *sname; //!< 名称简写
+@property (nonatomic, copy)   AMapGeoPoint *location; //!< 经纬度
+@property (nonatomic, copy)   NSString     *address;  //!< 地址
+@property (nonatomic, assign) NSInteger     distance; //!< 距中心点距离
+@property (nonatomic, copy)   NSString     *subtype; //!< 子POI类型
+
+@end
 
 /// POI
 @interface AMapPOI : AMapSearchObject
@@ -91,7 +115,8 @@
 @property (nonatomic, copy)   AMapGeoPoint *location; //!< 经纬度
 @property (nonatomic, copy)   NSString     *address;  //!< 地址
 @property (nonatomic, copy)   NSString     *tel;  //!< 电话
-@property (nonatomic, assign) NSInteger     distance; //!< 距中心点距离
+@property (nonatomic, assign) NSInteger     distance; //!< 距中心点距离，仅在周边搜索时有效
+@property (nonatomic, copy)   NSString     *parkingType; //!< 停车场类型，地上、地下、路边
 
 // 扩展信息
 @property (nonatomic, copy)   NSString     *postcode; //!< 邮编
@@ -109,10 +134,23 @@
 @property (nonatomic, copy)   NSString     *direction; //!< 方向
 @property (nonatomic, assign) BOOL          hasIndoorMap; //!< 是否有室内地图
 @property (nonatomic, copy)   NSString     *businessArea; //!< 所在商圈
+@property (nonatomic, strong) AMapIndoorData *indoorData; //!< 室内信息
+@property (nonatomic, strong) NSArray<AMapSubPOI *> *subPOIs; //!< 子POI列表 AMapSubPOI 数组
 
 @end
 
 #pragma mark - 逆地理编码 && 地理编码
+
+/// 兴趣区域
+@interface AMapAOI : AMapSearchObject
+
+@property (nonatomic, copy)   NSString     *uid; //!< AOI全局唯一ID
+@property (nonatomic, copy)   NSString     *name; //!< 名称
+@property (nonatomic, copy)   NSString     *adcode;   //!< 所在区域编码
+@property (nonatomic, copy)   AMapGeoPoint *location; //!< 中心点经纬度
+@property (nonatomic, assign) CGFloat      area; //!< 面积，单位平方米
+
+@end
 
 /// 道路
 @interface AMapRoad : AMapSearchObject
@@ -149,27 +187,28 @@
 
 @end
 
-/// 地址组成要素
-@interface AMapAddressComponent : AMapSearchObject
-
-@property (nonatomic, copy)   NSString         *province; //!< 省/直辖市
-@property (nonatomic, copy)   NSString         *city; //!< 市
-@property (nonatomic, copy)   NSString         *district; //!< 区
-@property (nonatomic, copy)   NSString         *township; //!< 乡镇
-@property (nonatomic, copy)   NSString         *neighborhood; //!< 社区
-@property (nonatomic, copy)   NSString         *building; //!< 建筑
-@property (nonatomic, copy)   NSString         *citycode; //!< 城市编码
-@property (nonatomic, copy)   NSString         *adcode; //!< 区域编码
-@property (nonatomic, strong) AMapStreetNumber *streetNumber; //!< 门牌信息
-@property (nonatomic, strong) NSArray          *businessAreas; //!< 商圈列表 AMapBusinessArea 数组
-
-@end
-
 /// 商圈
 @interface AMapBusinessArea : AMapSearchObject
 
 @property (nonatomic, strong) NSString     *name; //!< 名称
 @property (nonatomic, copy)   AMapGeoPoint *location; //!< 中心坐标
+
+@end
+
+/// 地址组成要素
+@interface AMapAddressComponent : AMapSearchObject
+
+@property (nonatomic, copy)   NSString         *province; //!< 省/直辖市
+@property (nonatomic, copy)   NSString         *city; //!< 市
+@property (nonatomic, copy)   NSString         *citycode; //!< 城市编码
+@property (nonatomic, copy)   NSString         *district; //!< 区
+@property (nonatomic, copy)   NSString         *adcode; //!< 区域编码
+@property (nonatomic, copy)   NSString         *township; //!< 乡镇街道
+@property (nonatomic, copy)   NSString         *towncode; //!< 乡镇街道编码
+@property (nonatomic, copy)   NSString         *neighborhood; //!< 社区
+@property (nonatomic, copy)   NSString         *building; //!< 建筑
+@property (nonatomic, strong) AMapStreetNumber *streetNumber; //!< 门牌信息
+@property (nonatomic, strong) NSArray<AMapBusinessArea *> *businessAreas; //!< 商圈列表 AMapBusinessArea 数组
 
 @end
 
@@ -181,9 +220,10 @@
 @property (nonatomic, strong) AMapAddressComponent *addressComponent; //!< 地址组成要素
 
 // 扩展信息
-@property (nonatomic, strong) NSArray *roads; //!< 道路信息 AMapRoad 数组
-@property (nonatomic, strong) NSArray *roadinters; //!< 道路路口信息 AMapRoadInter 数组
-@property (nonatomic, strong) NSArray *pois; //!< 兴趣点信息 AMapPOI 数组
+@property (nonatomic, strong) NSArray<AMapRoad *> *roads; //!< 道路信息 AMapRoad 数组
+@property (nonatomic, strong) NSArray<AMapRoadInter *> *roadinters; //!< 道路路口信息 AMapRoadInter 数组
+@property (nonatomic, strong) NSArray<AMapPOI *> *pois; //!< 兴趣点信息 AMapPOI 数组
+@property (nonatomic, strong) NSArray<AMapAOI *> *aois; //!< 兴趣区域信息 AMapAOI 数组
 
 @end
 
@@ -195,17 +235,19 @@
 @property (nonatomic, copy) NSString     *city; //<! 城市名
 @property (nonatomic, copy) NSString     *citycode; //!< 城市编码
 @property (nonatomic, copy) NSString     *district; //<! 区域名称
-@property (nonatomic, copy) NSString     *township; //<! 所在乡镇
+@property (nonatomic, copy) NSString     *adcode; //<! 区域编码
+@property (nonatomic, copy) NSString     *township; //<! 乡镇街道
 @property (nonatomic, copy) NSString     *neighborhood; //<! 社区
 @property (nonatomic, copy) NSString     *building; //<! 楼
-@property (nonatomic, copy) NSString     *adcode; //<! 区域编码
 @property (nonatomic, copy) AMapGeoPoint *location; //<! 坐标点
 @property (nonatomic, copy) NSString     *level; //<! 匹配的等级
 
 @end
 
 #pragma mark - 公交查询
+@class AMapBusLine;
 
+/// 公交站
 @interface AMapBusStop : AMapSearchObject
 
 @property (nonatomic, copy)   NSString     *uid; //!< 公交站点ID
@@ -213,8 +255,8 @@
 @property (nonatomic, copy)   NSString     *name; //!< 公交站名
 @property (nonatomic, copy)   NSString     *citycode; //!< 城市编码
 @property (nonatomic, copy)   AMapGeoPoint *location; //!<经纬度坐标
-@property (nonatomic, strong) NSArray      *buslines; //!< 途径此站的公交路线 AMapBusLine 数组
-@property (nonatomic, copy)   NSString     *sequence; //!< 查询公交线路时的第几站
+@property (nonatomic, strong) NSArray<AMapBusLine *> *buslines; //!< 途径此站的公交路线 AMapBusLine 数组
+@property (nonatomic, copy)   NSString *sequence; //!< 查询公交线路时的第几站
 
 @end
 
@@ -235,17 +277,17 @@
 @property (nonatomic, copy)   NSString *startTime; //!< 首班车时间
 @property (nonatomic, copy)   NSString *endTime; //!< 末班车时间
 @property (nonatomic, copy)   NSString *company; //!< 所属公交公司
-@property (nonatomic, assign) CGFloat   distance; //!< 距离。在公交线路查询时，该值为此线路的全程距离，单位为千米; 在公交路径规划时，该值为乘坐此路公交车的行驶距离，单位为米
-@property (nonatomic, assign) CGFloat         basicPrice; //!< 起步价
-@property (nonatomic, assign) CGFloat         totalPrice; //!< 全程票价
+@property (nonatomic, assign) CGFloat distance; //!< 距离。在公交线路查询时，该值为此线路的全程距离，单位为千米; 在公交路径规划时，该值为乘坐此路公交车的行驶距离，单位为米
+@property (nonatomic, assign) CGFloat basicPrice; //!< 起步价
+@property (nonatomic, assign) CGFloat totalPrice; //!< 全程票价
 @property (nonatomic, copy)   AMapGeoPolygon *bounds; //!< 矩形区域左下、右上顶点坐标
-@property (nonatomic, strong) NSArray        *busStops; //!< 本线路公交站 AMapBusStop 数组
+@property (nonatomic, strong) NSArray<AMapBusStop *> *busStops; //!< 本线路公交站 AMapBusStop 数组
 
 // 公交路径规划信息
 @property (nonatomic, strong) AMapBusStop *departureStop; //!< 起程站
 @property (nonatomic, strong) AMapBusStop *arrivalStop; //!< 下车站
-@property (nonatomic, strong) NSArray     *viaBusStops; //!< 途径公交站 AMapBusStop 数组
-@property (nonatomic, assign) NSInteger    duration; //!< 预计行驶时间（单位：秒）
+@property (nonatomic, strong) NSArray<AMapBusStop *> *viaBusStops; //!< 途径公交站 AMapBusStop 数组
+@property (nonatomic, assign) NSInteger duration; //!< 预计行驶时间（单位：秒）
 
 @end
 
@@ -257,35 +299,19 @@
 @property (nonatomic, copy)   NSString     *citycode; //!< 城市编码
 @property (nonatomic, copy)   NSString     *name; //!< 行政区名称
 @property (nonatomic, copy)   NSString     *level; //!< 级别
-@property (nonatomic, strong) NSArray      *districts; //!< 下级行政区域数组
 @property (nonatomic, copy)   AMapGeoPoint *center; //!< 城市中心点
-@property (nonatomic, strong) NSArray      *polylines; //!< 行政区边界坐标点, NSString 数组
+@property (nonatomic, strong) NSArray<AMapDistrict *> *districts; //!< 下级行政区域数组
+@property (nonatomic, strong) NSArray<NSString *> *polylines; //!< 行政区边界坐标点, NSString 数组
 
 @end
 
 #pragma mark - 路径规划
 
-/// 路径规划信息
-@interface AMapRoute : AMapSearchObject
+/// 实时路况信息
+@interface AMapTMC : AMapSearchObject
 
-@property (nonatomic, copy) AMapGeoPoint *origin; //!< 起点坐标
-@property (nonatomic, copy) AMapGeoPoint *destination; //!< 终点坐标
-
-@property (nonatomic, assign) CGFloat  taxiCost; //!< 出租车费用（单位：元）
-@property (nonatomic, strong) NSArray *paths; //!< 步行、驾车方案列表 AMapPath 数组
-@property (nonatomic, strong) NSArray *transits; //!< 公交换乘方案列表 AMapTransit 数组
-
-@end
-
-/// 步行、驾车方案
-@interface AMapPath : AMapSearchObject
-
-@property (nonatomic, assign) NSInteger  distance; //!< 起点和终点的距离
-@property (nonatomic, assign) NSInteger  duration; //!< 预计耗时（单位：秒）
-@property (nonatomic, copy)   NSString  *strategy; //!< 导航策略
-@property (nonatomic, strong) NSArray   *steps; //!< 导航路段 AMapStep数组
-@property (nonatomic, assign) CGFloat    tolls; //!< 此方案费用（单位：元）
-@property (nonatomic, assign) NSInteger  tollDistance; //!< 此方案收费路段长度（单位：米）
+@property (nonatomic, assign) NSInteger distance; //!< 长度（单位：米）
+@property (nonatomic, copy)   NSString  *status; //!< 路况状态描述：0 未知，1 畅通，2 缓行，3 拥堵
 
 @end
 
@@ -306,7 +332,21 @@
 @property (nonatomic, copy)   NSString  *tollRoad; //!< 主要收费路段
 
 // 扩展信息
-@property (nonatomic, strong) NSArray *cities; //!< 途径城市 AMapCity 数组
+@property (nonatomic, strong) NSArray<AMapCity *> *cities; //!< 途径城市 AMapCity 数组
+@property (nonatomic, strong) NSArray<AMapTMC *> *tmcs; //!< 路况信息数组，只有驾车路径规划时有效
+
+@end
+
+/// 步行、驾车方案
+@interface AMapPath : AMapSearchObject
+
+@property (nonatomic, assign) NSInteger  distance; //!< 起点和终点的距离
+@property (nonatomic, assign) NSInteger  duration; //!< 预计耗时（单位：秒）
+@property (nonatomic, copy)   NSString  *strategy; //!< 导航策略
+@property (nonatomic, strong) NSArray<AMapStep *> *steps; //!< 导航路段 AMapStep数组
+@property (nonatomic, assign) CGFloat    tolls; //!< 此方案费用（单位：元）
+@property (nonatomic, assign) NSInteger  tollDistance; //!< 此方案收费路段长度（单位：米）
+@property (nonatomic, assign) NSInteger  totalTrafficLights; //!< 此方案交通信号灯个数
 
 @end
 
@@ -317,7 +357,7 @@
 @property (nonatomic, copy)   AMapGeoPoint *destination; //!< 终点坐标
 @property (nonatomic, assign) NSInteger     distance; //!< 起点和终点的步行距离
 @property (nonatomic, assign) NSInteger     duration; //!< 步行预计时间
-@property (nonatomic, strong) NSArray      *steps; //!< 步行路段 AMapStep 数组
+@property (nonatomic, strong) NSArray<AMapStep *> *steps; //!< 步行路段 AMapStep 数组
 
 @end
 
@@ -325,7 +365,7 @@
 @interface AMapSegment : AMapSearchObject
 
 @property (nonatomic, strong) AMapWalking  *walking; //!< 此路段步行导航信息
-@property (nonatomic, strong) NSArray      *buslines; //!< 此路段可供选择的不同公交线路 AMapBusLine 数组
+@property (nonatomic, strong) NSArray<AMapBusLine *> *buslines; //!< 此路段可供选择的不同公交线路 AMapBusLine 数组
 @property (nonatomic, copy)   NSString     *enterName; //!< 入口名称
 @property (nonatomic, copy)   AMapGeoPoint *enterLocation; //!< 入口经纬度
 @property (nonatomic, copy)   NSString     *exitName; //!< 出口名称
@@ -340,7 +380,20 @@
 @property (nonatomic, assign) NSInteger  duration; //!< 此换乘方案预期时间（单位：秒）
 @property (nonatomic, assign) BOOL       nightflag; //!< 是否是夜班车
 @property (nonatomic, assign) NSInteger  walkingDistance; //!< 此方案总步行距离（单位：米）
-@property (nonatomic, strong) NSArray   *segments; //!< 换乘路段 AMapSegment 数组
+@property (nonatomic, strong) NSArray<AMapSegment *> *segments; //!< 换乘路段 AMapSegment 数组
+@property (nonatomic, assign) NSInteger  distance; //!< 当前方案的总距离
+
+@end
+
+/// 路径规划信息
+@interface AMapRoute : AMapSearchObject
+
+@property (nonatomic, copy) AMapGeoPoint *origin; //!< 起点坐标
+@property (nonatomic, copy) AMapGeoPoint *destination; //!< 终点坐标
+
+@property (nonatomic, assign) CGFloat  taxiCost; //!< 出租车费用（单位：元）
+@property (nonatomic, strong) NSArray<AMapPath *> *paths; //!< 步行、驾车方案列表 AMapPath 数组
+@property (nonatomic, strong) NSArray<AMapTransit *> *transits; //!< 公交换乘方案列表 AMapTransit 数组
 
 @end
 
@@ -361,17 +414,6 @@
 
 @end
 
-/// 天气预报类，支持当前时间在内的3天的天气进行预报
-@interface AMapLocalWeatherForecast : AMapSearchObject
-
-@property (nonatomic, copy)   NSString *adcode; //!< 区域编码
-@property (nonatomic, copy)   NSString *province; //!< 省份名
-@property (nonatomic, copy)   NSString *city; //!< 城市名
-@property (nonatomic, copy)   NSString *reportTime; //!<数据发布时间
-@property (nonatomic, strong) NSArray  *casts; //!< 天气预报AMapLocalDayWeatherForecast数组
-
-@end
-
 /// 某一天的天气预报信息
 @interface AMapLocalDayWeatherForecast : AMapSearchObject
 
@@ -385,6 +427,17 @@
 @property (nonatomic, copy) NSString *nightWind; //!< 晚上风向
 @property (nonatomic, copy) NSString *dayPower; //!< 白天风力
 @property (nonatomic, copy) NSString *nightPower; //!< 晚上风力
+
+@end
+
+/// 天气预报类，支持当前时间在内的3天的天气进行预报
+@interface AMapLocalWeatherForecast : AMapSearchObject
+
+@property (nonatomic, copy)   NSString *adcode; //!< 区域编码
+@property (nonatomic, copy)   NSString *province; //!< 省份名
+@property (nonatomic, copy)   NSString *city; //!< 城市名
+@property (nonatomic, copy)   NSString *reportTime; //!<数据发布时间
+@property (nonatomic, strong) NSArray<AMapLocalDayWeatherForecast *> *casts; //!< 天气预报AMapLocalDayWeatherForecast数组
 
 @end
 
@@ -421,7 +474,7 @@
 @property (nonatomic, copy)   NSString     *createTime; //!< 创建时间
 @property (nonatomic, copy)   NSString     *updateTime; //!< 更新时间
 @property (nonatomic, assign) NSInteger     distance; //!< 离当前位置的距离(只在PlaceAround搜索时有效)
-@property (nonatomic, strong) NSArray      *images;  //!< 图片信息
+@property (nonatomic, strong) NSArray<AMapCloudImage *> *images;  //!< 图片信息
 
 @end
 

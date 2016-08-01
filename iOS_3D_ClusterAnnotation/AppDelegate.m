@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "APIKey.h"
-#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 #import "AnnotationClusterViewController.h"
 
 
@@ -29,8 +29,7 @@
         [alert show];
     }
     
-    [MAMapServices sharedServices].apiKey = (NSString *)APIKey;
-    [AMapSearchServices sharedServices].apiKey = (NSString *)APIKey;
+    [AMapServices sharedServices].apiKey = (NSString *)APIKey;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

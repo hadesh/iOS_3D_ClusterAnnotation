@@ -12,8 +12,6 @@
 		747B944A1B4688AE00474F78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747B94491B4688AE00474F78 /* Images.xcassets */; };
 		747B944D1B4688AE00474F78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747B944B1B4688AE00474F78 /* LaunchScreen.xib */; };
 		747B94591B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B94581B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m */; };
-		74F463F41B4A1471001B55AA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 74F463F21B4A1471001B55AA /* images */; };
-		74F463F51B4A1471001B55AA /* offline in Resources */ = {isa = PBXBuildFile; fileRef = 74F463F31B4A1471001B55AA /* offline */; };
 		74F4645A1B4A2B57001B55AA /* ClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464521B4A2B57001B55AA /* ClusterAnnotation.m */; };
 		74F4645B1B4A2B57001B55AA /* CoordinateQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464541B4A2B57001B55AA /* CoordinateQuadTree.m */; };
 		74F4645C1B4A2B57001B55AA /* QuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464561B4A2B57001B55AA /* QuadTree.m */; };
@@ -22,8 +20,6 @@
 		74F464671B4A2B82001B55AA /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464631B4A2B82001B55AA /* BaseMapViewController.m */; };
 		74F464681B4A2B82001B55AA /* PoiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464651B4A2B82001B55AA /* PoiDetailViewController.m */; };
 		74F464691B4A2E1B001B55AA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4644D1B4A2095001B55AA /* Security.framework */; };
-		74F4646A1B4A2E1B001B55AA /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4644B1B4A2088001B55AA /* libstdc++.6.0.9.dylib */; };
-		74F4646B1B4A2E1B001B55AA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464491B4A207C001B55AA /* libz.dylib */; };
 		74F4646C1B4A2E1B001B55AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464471B4A206C001B55AA /* SystemConfiguration.framework */; };
 		74F4646D1B4A2E1B001B55AA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464131B4A1D2F001B55AA /* CoreTelephony.framework */; };
 		74F4646E1B4A2E1B001B55AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464111B4A1D27001B55AA /* CoreLocation.framework */; };
@@ -36,7 +32,11 @@
 		74F464BF1B4D1181001B55AA /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464BD1B4D1181001B55AA /* AMapSearchKit.framework */; };
 		74F464C01B4D1181001B55AA /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464BE1B4D1181001B55AA /* MAMapKit.framework */; };
 		74F464C51B4E11D2001B55AA /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464C41B4E11D2001B55AA /* CustomCalloutView.m */; };
-		814DD7321C0E9D1000C18F58 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 814DD7311C0E9D1000C18F58 /* AMap.bundle */; };
+		811D54531D4F5AC600773BCC /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 811D54521D4F5AC600773BCC /* AMap.bundle */; };
+		811D54551D4F5ADB00773BCC /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D54541D4F5ADB00773BCC /* AMapFoundationKit.framework */; };
+		811D54571D4F5AE000773BCC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D54561D4F5AE000773BCC /* libz.tbd */; };
+		811D54591D4F5AE700773BCC /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */; };
+		811D545B1D4F5AED00773BCC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D545A1D4F5AED00773BCC /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +60,7 @@
 		747B94521B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_3D_ClusterAnnotationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		747B94571B4688AE00474F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747B94581B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_3D_ClusterAnnotationTests.m; sourceTree = "<group>"; };
-		74F463F21B4A1471001B55AA /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
-		74F463F31B4A1471001B55AA /* offline */ = {isa = PBXFileReference; lastKnownFileType = folder; path = offline; sourceTree = "<group>"; };
 		74F463F71B4A14BE001B55AA /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
-		74F464051B4A1C9E001B55AA /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		74F464071B4A1CE8001B55AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74F464091B4A1CF2001B55AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,8 +69,6 @@
 		74F464111B4A1D27001B55AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		74F464131B4A1D2F001B55AA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		74F464471B4A206C001B55AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		74F464491B4A207C001B55AA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		74F4644B1B4A2088001B55AA /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		74F4644D1B4A2095001B55AA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		74F464511B4A2B57001B55AA /* ClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotation.h; sourceTree = "<group>"; };
 		74F464521B4A2B57001B55AA /* ClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotation.m; sourceTree = "<group>"; };
@@ -95,7 +90,11 @@
 		74F464BE1B4D1181001B55AA /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		74F464C31B4E11D2001B55AA /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
 		74F464C41B4E11D2001B55AA /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
-		814DD7311C0E9D1000C18F58 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Resources/MAMapKit.framework/Versions/3.2.1.94eef6d.752/Resources/AMap.bundle; sourceTree = "<group>"; };
+		811D54521D4F5AC600773BCC /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Resources/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
+		811D54541D4F5ADB00773BCC /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		811D54561D4F5AE000773BCC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		811D545A1D4F5AED00773BCC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +102,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811D545B1D4F5AED00773BCC /* libc++.tbd in Frameworks */,
+				811D54591D4F5AE700773BCC /* libstdc++.6.0.9.tbd in Frameworks */,
+				811D54571D4F5AE000773BCC /* libz.tbd in Frameworks */,
 				74F464691B4A2E1B001B55AA /* Security.framework in Frameworks */,
-				74F4646A1B4A2E1B001B55AA /* libstdc++.6.0.9.dylib in Frameworks */,
-				74F4646B1B4A2E1B001B55AA /* libz.dylib in Frameworks */,
+				811D54551D4F5ADB00773BCC /* AMapFoundationKit.framework in Frameworks */,
 				74F4646C1B4A2E1B001B55AA /* SystemConfiguration.framework in Frameworks */,
 				74F4646D1B4A2E1B001B55AA /* CoreTelephony.framework in Frameworks */,
 				74F4646E1B4A2E1B001B55AA /* CoreLocation.framework in Frameworks */,
@@ -132,7 +133,10 @@
 		747B94301B4688AE00474F78 = {
 			isa = PBXGroup;
 			children = (
-				814DD7311C0E9D1000C18F58 /* AMap.bundle */,
+				811D545A1D4F5AED00773BCC /* libc++.tbd */,
+				811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */,
+				811D54561D4F5AE000773BCC /* libz.tbd */,
+				811D54521D4F5AC600773BCC /* AMap.bundle */,
 				747B943B1B4688AE00474F78 /* iOS_3D_ClusterAnnotation */,
 				747B94551B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests */,
 				747B943A1B4688AE00474F78 /* Products */,
@@ -167,8 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				74F464041B4A1C9E001B55AA /* Resources */,
-				74F463F21B4A1471001B55AA /* images */,
-				74F463F31B4A1471001B55AA /* offline */,
 				747B943D1B4688AE00474F78 /* Info.plist */,
 				747B943E1B4688AE00474F78 /* main.m */,
 			);
@@ -203,11 +205,10 @@
 		74F464041B4A1C9E001B55AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				811D54541D4F5ADB00773BCC /* AMapFoundationKit.framework */,
 				74F464BD1B4D1181001B55AA /* AMapSearchKit.framework */,
 				74F464BE1B4D1181001B55AA /* MAMapKit.framework */,
 				74F4644D1B4A2095001B55AA /* Security.framework */,
-				74F4644B1B4A2088001B55AA /* libstdc++.6.0.9.dylib */,
-				74F464491B4A207C001B55AA /* libz.dylib */,
 				74F464471B4A206C001B55AA /* SystemConfiguration.framework */,
 				74F464131B4A1D2F001B55AA /* CoreTelephony.framework */,
 				74F464111B4A1D27001B55AA /* CoreLocation.framework */,
@@ -216,7 +217,6 @@
 				74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */,
 				74F464091B4A1CF2001B55AA /* Foundation.framework */,
 				74F464071B4A1CE8001B55AA /* UIKit.framework */,
-				74F464051B4A1C9E001B55AA /* AMap.bundle */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -359,9 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				814DD7321C0E9D1000C18F58 /* AMap.bundle in Resources */,
-				74F463F51B4A1471001B55AA /* offline in Resources */,
-				74F463F41B4A1471001B55AA /* images in Resources */,
+				811D54531D4F5AC600773BCC /* AMap.bundle in Resources */,
 				747B944D1B4688AE00474F78 /* LaunchScreen.xib in Resources */,
 				747B944A1B4688AE00474F78 /* Images.xcassets in Resources */,
 			);
