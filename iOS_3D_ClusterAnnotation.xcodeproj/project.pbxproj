@@ -511,8 +511,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/pcuser/Downloads,
-					"$(PROJECT_DIR)/Resources",
+					"$(PROJECT_DIR)/Resources/",
 				);
 				INFOPLIST_FILE = iOS_3D_ClusterAnnotation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -530,7 +529,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/pcuser/Downloads,
 					"$(PROJECT_DIR)/Resources",
 				);
 				INFOPLIST_FILE = iOS_3D_ClusterAnnotation/Info.plist;

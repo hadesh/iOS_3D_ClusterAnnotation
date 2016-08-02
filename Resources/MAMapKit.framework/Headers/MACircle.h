@@ -2,57 +2,47 @@
 //  MACircle.h
 //  MAMapKit
 //
-//
-//  Copyright (c) 2011年 Autonavi Inc. All rights reserved.
+//  Created by AutoNavi.
+//  Copyright (c) 2013年 AutoNavi. All rights reserved.
 //
 
 #import "MAShape.h"
 #import "MAOverlay.h"
 #import "MAGeometry.h"
 
-/**
- *  该类用于定义一个圆, 通常MACircle是MACircleView的model
+/*!
+ @brief 该类用于定义一个圆, 通常MACircle是MACircleRenderer的model
  */
-@interface MACircle : MAShape <MAOverlay> {
-    @package
-    CLLocationCoordinate2D _coordinate;
-    CLLocationDistance _radius;
-    
-    MAMapRect _boundingMapRect;
-}
+@interface MACircle : MAShape <MAOverlay>
 
-/**
- *  根据中心点和半径生成圆
- *
- *  @param coord  中心点的经纬度坐标
- *  @param radius 半径，单位：米
- *
- *  @return 新生成的圆
+/*!
+ @brief 根据中心点和半径生成圆
+ @param coord 中心点的经纬度坐标
+ @param radius 半径，单位：米
+ @return 新生成的圆
  */
 + (instancetype)circleWithCenterCoordinate:(CLLocationCoordinate2D)coord
-                                    radius:(CLLocationDistance)radius;
+                                  radius:(CLLocationDistance)radius;
 
-/**
- *  根据map rect生成圆
- *
- *  @param mapRect mapRect 圆的最小外界矩形
- *
- *  @return 新生成的圆
+/*!
+ @brief 根据map rect生成圆
+ @param mapRect 生成的圆的直径为MAX(width, height)
+ @return 新生成的圆
  */
 + (instancetype)circleWithMapRect:(MAMapRect)mapRect;
 
-/**
- *  中心点经纬度坐标
+/*!
+ @brief 中心点经纬度坐标
  */
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
-/**
- *  半径，单位：米
+/*!
+ @brief 半径，单位：米
  */
 @property (nonatomic, readonly) CLLocationDistance radius;
 
-/**
- *  该圆的外接map rect
+/*!
+ @brief 该圆的外接map rect
  */
 @property (nonatomic, readonly) MAMapRect boundingMapRect;
 

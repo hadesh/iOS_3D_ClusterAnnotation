@@ -1,35 +1,33 @@
 //
 //  MATileOverlayRenderer.h
-//  MapKit_static
+//  MAMapKitNew
 //
-//  Created by Li Fei on 11/25/13.
-//  Copyright (c) 2013 songjian. All rights reserved.
+//  Created by xiaoming han on 14-1-24.
+//  Copyright (c) 2014年 AutoNavi. All rights reserved.
 //
 
 #import "MAOverlayRenderer.h"
 #import "MATileOverlay.h"
 
-/**
- *  此类是将MAOverlayRenderer中的覆盖tiles显示在地图上的Renderer
+/*!
+ @brief 此类将MATileOverlay中的tile渲染到地图上
  */
 @interface MATileOverlayRenderer : MAOverlayRenderer
 
-/**
-*  覆盖在球面墨卡托投影上的图片tiles的数据源
-*/
+/*!
+ @brief 覆盖在球面墨卡托投影上的图片tiles的数据源
+ */
 @property (nonatomic ,readonly) MATileOverlay *tileOverlay;
 
-/**
- *  根据指定的tileOverlay生成将tiles显示在地图上的Renderer
- *
- *  @param tileOverlay 制定了覆盖图片，以及图片的覆盖区域的groundOverlay
- *
- *  @return 以tileOverlay新生成Renderer
+/*!
+ @brief 根据指定的tileOverlay生成MATileOverlayRenderer
+ @param tileOverlay 数据源
+ @return 初始化成功则返回overlay renderer,否则返回nil
  */
-- (instancetype)initWithTileOverlay:(MATileOverlay *)tileOverlay;
+- (instancetype)initWithTileOverlay:(MATileOverlay *)overlay;
 
-/**
- *  清除所有tile的缓存，并刷新overlay
+/*!
+ @brief 清除所有tile的缓存，并刷新overlay
  */
 - (void)reloadData;
 
