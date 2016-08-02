@@ -2,8 +2,8 @@
 //  MAUserLocation.h
 //  MAMapKit
 //
-//  Created by yin cai on 12-1-4.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//  Created by AutoNavi.
+//  Copyright (c) 2012年 AutoNavi. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,34 +12,35 @@
 @class CLLocation;
 @class CLHeading;
 
-/**
- *  定位信息类
+/*!
+ @brief 定位信息类
  */
 @interface MAUserLocation : NSObject<MAAnnotation>
 
-/**
- *  位置更新状态，如果正在更新位置信息，则该值为YES
+/*!
+ @brief 位置更新状态，如果正在更新位置信息，则该值为YES.
  */
-@property (readonly, nonatomic, getter = isUpdating) BOOL updating;
+@property (nonatomic, readonly, getter = isUpdating) BOOL updating;
 
-/**
- *  位置信息，如果MAMapView的showsUserLocation为NO，或者尚未定位成功，则该值为nil
+/*!
+ @brief 位置信息, 如果MAMapView的showsUserLocation为NO, 或者尚未定位成功, 则该值为nil.
  */
-@property (readonly, nonatomic, retain) CLLocation *location;
+@property (nonatomic, readonly) CLLocation *location;
 
-/**
- *  heading信息
+/*!
+ @brief heading信息.
  */
-@property (readonly, nonatomic, retain) CLHeading *heading;
+@property (nonatomic, readonly) CLHeading *heading;
 
-/**
- *  定位标注点要显示的标题信息
+/*!
+ @brief 定位标注点要显示的标题信息.
  */
 @property (nonatomic, copy) NSString *title;
 
-/**
- *  定位标注点要显示的子标题信息
+/*!
+ @brief 定位标注点要显示的子标题信息.
  */
 @property (nonatomic, copy) NSString *subtitle;
 
 @end
+
