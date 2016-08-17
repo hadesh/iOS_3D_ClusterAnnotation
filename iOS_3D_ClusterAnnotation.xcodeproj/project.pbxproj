@@ -29,14 +29,14 @@
 		74F464721B4A2E1B001B55AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464091B4A1CF2001B55AA /* Foundation.framework */; };
 		74F464731B4A2E1B001B55AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464071B4A1CE8001B55AA /* UIKit.framework */; };
 		74F464891B4BCCFE001B55AA /* ClusterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464871B4BCCFE001B55AA /* ClusterTableViewCell.m */; };
-		74F464BF1B4D1181001B55AA /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464BD1B4D1181001B55AA /* AMapSearchKit.framework */; };
-		74F464C01B4D1181001B55AA /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464BE1B4D1181001B55AA /* MAMapKit.framework */; };
 		74F464C51B4E11D2001B55AA /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464C41B4E11D2001B55AA /* CustomCalloutView.m */; };
-		811D54531D4F5AC600773BCC /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 811D54521D4F5AC600773BCC /* AMap.bundle */; };
-		811D54551D4F5ADB00773BCC /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D54541D4F5ADB00773BCC /* AMapFoundationKit.framework */; };
 		811D54571D4F5AE000773BCC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D54561D4F5AE000773BCC /* libz.tbd */; };
 		811D54591D4F5AE700773BCC /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */; };
 		811D545B1D4F5AED00773BCC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D545A1D4F5AED00773BCC /* libc++.tbd */; };
+		81B61EB91D64108700415DAD /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B61EB61D64108700415DAD /* AMapFoundationKit.framework */; };
+		81B61EBA1D64108700415DAD /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B61EB71D64108700415DAD /* AMapSearchKit.framework */; };
+		81B61EBB1D64108700415DAD /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B61EB81D64108700415DAD /* MAMapKit.framework */; };
+		81B61EBD1D6410B800415DAD /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 81B61EBC1D6410B800415DAD /* AMap.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,15 +86,15 @@
 		74F464651B4A2B82001B55AA /* PoiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiDetailViewController.m; sourceTree = "<group>"; };
 		74F464861B4BCCFE001B55AA /* ClusterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterTableViewCell.h; sourceTree = "<group>"; };
 		74F464871B4BCCFE001B55AA /* ClusterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterTableViewCell.m; sourceTree = "<group>"; };
-		74F464BD1B4D1181001B55AA /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
-		74F464BE1B4D1181001B55AA /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		74F464C31B4E11D2001B55AA /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
 		74F464C41B4E11D2001B55AA /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
-		811D54521D4F5AC600773BCC /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Resources/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
-		811D54541D4F5ADB00773BCC /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		811D54561D4F5AE000773BCC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		811D545A1D4F5AED00773BCC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		81B61EB61D64108700415DAD /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		81B61EB71D64108700415DAD /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		81B61EB81D64108700415DAD /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		81B61EBC1D6410B800415DAD /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = iOS_3D_ClusterAnnotation/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,16 +106,16 @@
 				811D54591D4F5AE700773BCC /* libstdc++.6.0.9.tbd in Frameworks */,
 				811D54571D4F5AE000773BCC /* libz.tbd in Frameworks */,
 				74F464691B4A2E1B001B55AA /* Security.framework in Frameworks */,
-				811D54551D4F5ADB00773BCC /* AMapFoundationKit.framework in Frameworks */,
+				81B61EB91D64108700415DAD /* AMapFoundationKit.framework in Frameworks */,
 				74F4646C1B4A2E1B001B55AA /* SystemConfiguration.framework in Frameworks */,
 				74F4646D1B4A2E1B001B55AA /* CoreTelephony.framework in Frameworks */,
 				74F4646E1B4A2E1B001B55AA /* CoreLocation.framework in Frameworks */,
+				81B61EBA1D64108700415DAD /* AMapSearchKit.framework in Frameworks */,
+				81B61EBB1D64108700415DAD /* MAMapKit.framework in Frameworks */,
 				74F4646F1B4A2E1B001B55AA /* OpenGLES.framework in Frameworks */,
 				74F464701B4A2E1B001B55AA /* QuartzCore.framework in Frameworks */,
-				74F464BF1B4D1181001B55AA /* AMapSearchKit.framework in Frameworks */,
 				74F464711B4A2E1B001B55AA /* CoreGraphics.framework in Frameworks */,
 				74F464721B4A2E1B001B55AA /* Foundation.framework in Frameworks */,
-				74F464C01B4D1181001B55AA /* MAMapKit.framework in Frameworks */,
 				74F464731B4A2E1B001B55AA /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,10 +133,10 @@
 		747B94301B4688AE00474F78 = {
 			isa = PBXGroup;
 			children = (
+				81B61EBC1D6410B800415DAD /* AMap.bundle */,
 				811D545A1D4F5AED00773BCC /* libc++.tbd */,
 				811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */,
 				811D54561D4F5AE000773BCC /* libz.tbd */,
-				811D54521D4F5AC600773BCC /* AMap.bundle */,
 				747B943B1B4688AE00474F78 /* iOS_3D_ClusterAnnotation */,
 				747B94551B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests */,
 				747B943A1B4688AE00474F78 /* Products */,
@@ -170,7 +170,18 @@
 		747B943C1B4688AE00474F78 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				74F464041B4A1C9E001B55AA /* Resources */,
+				81B61EB61D64108700415DAD /* AMapFoundationKit.framework */,
+				81B61EB71D64108700415DAD /* AMapSearchKit.framework */,
+				81B61EB81D64108700415DAD /* MAMapKit.framework */,
+				74F4644D1B4A2095001B55AA /* Security.framework */,
+				74F464471B4A206C001B55AA /* SystemConfiguration.framework */,
+				74F464131B4A1D2F001B55AA /* CoreTelephony.framework */,
+				74F464111B4A1D27001B55AA /* CoreLocation.framework */,
+				74F4640F1B4A1D1E001B55AA /* OpenGLES.framework */,
+				74F4640D1B4A1D0D001B55AA /* QuartzCore.framework */,
+				74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */,
+				74F464091B4A1CF2001B55AA /* Foundation.framework */,
+				74F464071B4A1CE8001B55AA /* UIKit.framework */,
 				747B943D1B4688AE00474F78 /* Info.plist */,
 				747B943E1B4688AE00474F78 /* main.m */,
 			);
@@ -200,26 +211,6 @@
 				74F463F71B4A14BE001B55AA /* APIKey.h */,
 			);
 			path = Configuration;
-			sourceTree = "<group>";
-		};
-		74F464041B4A1C9E001B55AA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				811D54541D4F5ADB00773BCC /* AMapFoundationKit.framework */,
-				74F464BD1B4D1181001B55AA /* AMapSearchKit.framework */,
-				74F464BE1B4D1181001B55AA /* MAMapKit.framework */,
-				74F4644D1B4A2095001B55AA /* Security.framework */,
-				74F464471B4A206C001B55AA /* SystemConfiguration.framework */,
-				74F464131B4A1D2F001B55AA /* CoreTelephony.framework */,
-				74F464111B4A1D27001B55AA /* CoreLocation.framework */,
-				74F4640F1B4A1D1E001B55AA /* OpenGLES.framework */,
-				74F4640D1B4A1D0D001B55AA /* QuartzCore.framework */,
-				74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */,
-				74F464091B4A1CF2001B55AA /* Foundation.framework */,
-				74F464071B4A1CE8001B55AA /* UIKit.framework */,
-			);
-			name = Resources;
-			path = ../Resources;
 			sourceTree = "<group>";
 		};
 		74F4644F1B4A2B57001B55AA /* ClusterAnnotation */ = {
@@ -359,7 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				811D54531D4F5AC600773BCC /* AMap.bundle in Resources */,
+				81B61EBD1D6410B800415DAD /* AMap.bundle in Resources */,
 				747B944D1B4688AE00474F78 /* LaunchScreen.xib in Resources */,
 				747B944A1B4688AE00474F78 /* Images.xcassets in Resources */,
 			);
@@ -511,8 +502,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/pcuser/Downloads,
-					"$(PROJECT_DIR)/Resources",
+					"$(PROJECT_DIR)/iOS_3D_ClusterAnnotation",
 				);
 				INFOPLIST_FILE = iOS_3D_ClusterAnnotation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -530,8 +520,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/pcuser/Downloads,
-					"$(PROJECT_DIR)/Resources",
+					"$(PROJECT_DIR)/iOS_3D_ClusterAnnotation",
 				);
 				INFOPLIST_FILE = iOS_3D_ClusterAnnotation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
