@@ -8,7 +8,7 @@
 
 #import "CustomCalloutView.h"
 #import "ClusterTableViewCell.h"
-
+#import <AMapSearchKit/AMapSearchKit.h>
 
 const NSInteger kArrorHeight = 10;
 const NSInteger kCornerRadius = 6;

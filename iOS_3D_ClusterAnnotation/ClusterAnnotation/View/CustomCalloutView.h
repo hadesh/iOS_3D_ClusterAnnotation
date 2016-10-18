@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AMapSearchKit/AMapCommonObj.h>
 
 @protocol CustomCalloutViewTapDelegate <NSObject>
 

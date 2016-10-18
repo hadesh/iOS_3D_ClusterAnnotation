@@ -19,24 +19,13 @@
 		74F464661B4A2B82001B55AA /* AnnotationClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464611B4A2B82001B55AA /* AnnotationClusterViewController.m */; };
 		74F464671B4A2B82001B55AA /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464631B4A2B82001B55AA /* BaseMapViewController.m */; };
 		74F464681B4A2B82001B55AA /* PoiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464651B4A2B82001B55AA /* PoiDetailViewController.m */; };
-		74F464691B4A2E1B001B55AA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4644D1B4A2095001B55AA /* Security.framework */; };
-		74F4646C1B4A2E1B001B55AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464471B4A206C001B55AA /* SystemConfiguration.framework */; };
-		74F4646D1B4A2E1B001B55AA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464131B4A1D2F001B55AA /* CoreTelephony.framework */; };
-		74F4646E1B4A2E1B001B55AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464111B4A1D27001B55AA /* CoreLocation.framework */; };
-		74F4646F1B4A2E1B001B55AA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4640F1B4A1D1E001B55AA /* OpenGLES.framework */; };
-		74F464701B4A2E1B001B55AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4640D1B4A1D0D001B55AA /* QuartzCore.framework */; };
-		74F464711B4A2E1B001B55AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */; };
-		74F464721B4A2E1B001B55AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464091B4A1CF2001B55AA /* Foundation.framework */; };
-		74F464731B4A2E1B001B55AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F464071B4A1CE8001B55AA /* UIKit.framework */; };
 		74F464891B4BCCFE001B55AA /* ClusterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464871B4BCCFE001B55AA /* ClusterTableViewCell.m */; };
 		74F464C51B4E11D2001B55AA /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F464C41B4E11D2001B55AA /* CustomCalloutView.m */; };
 		811D54571D4F5AE000773BCC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D54561D4F5AE000773BCC /* libz.tbd */; };
 		811D54591D4F5AE700773BCC /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */; };
 		811D545B1D4F5AED00773BCC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 811D545A1D4F5AED00773BCC /* libc++.tbd */; };
-		81B61EB91D64108700415DAD /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B61EB61D64108700415DAD /* AMapFoundationKit.framework */; };
-		81B61EBA1D64108700415DAD /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B61EB71D64108700415DAD /* AMapSearchKit.framework */; };
-		81B61EBB1D64108700415DAD /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B61EB81D64108700415DAD /* MAMapKit.framework */; };
-		81B61EBD1D6410B800415DAD /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 81B61EBC1D6410B800415DAD /* AMap.bundle */; };
+		81F8105B1DB60ADB00D4804D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F8105A1DB60ADA00D4804D /* JavaScriptCore.framework */; };
+		DB8E522C9305FFAB452BD2A8 /* libPods-iOS_3D_ClusterAnnotation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C35C23E3B703260ECBC868A2 /* libPods-iOS_3D_ClusterAnnotation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56CE7FDE07DAF03313FA3AAA /* Pods-iOS_3D_ClusterAnnotation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_3D_ClusterAnnotation.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_3D_ClusterAnnotation/Pods-iOS_3D_ClusterAnnotation.release.xcconfig"; sourceTree = "<group>"; };
 		747B94391B4688AE00474F78 /* iOS_3D_ClusterAnnotation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_3D_ClusterAnnotation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		747B943D1B4688AE00474F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747B943E1B4688AE00474F78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,15 +51,6 @@
 		747B94571B4688AE00474F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747B94581B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_3D_ClusterAnnotationTests.m; sourceTree = "<group>"; };
 		74F463F71B4A14BE001B55AA /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
-		74F464071B4A1CE8001B55AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		74F464091B4A1CF2001B55AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		74F4640D1B4A1D0D001B55AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		74F4640F1B4A1D1E001B55AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		74F464111B4A1D27001B55AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		74F464131B4A1D2F001B55AA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		74F464471B4A206C001B55AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		74F4644D1B4A2095001B55AA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		74F464511B4A2B57001B55AA /* ClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotation.h; sourceTree = "<group>"; };
 		74F464521B4A2B57001B55AA /* ClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotation.m; sourceTree = "<group>"; };
 		74F464531B4A2B57001B55AA /* CoordinateQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateQuadTree.h; sourceTree = "<group>"; };
@@ -91,10 +72,9 @@
 		811D54561D4F5AE000773BCC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		811D545A1D4F5AED00773BCC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		81B61EB61D64108700415DAD /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
-		81B61EB71D64108700415DAD /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
-		81B61EB81D64108700415DAD /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
-		81B61EBC1D6410B800415DAD /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = iOS_3D_ClusterAnnotation/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
+		81F8105A1DB60ADA00D4804D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C35C23E3B703260ECBC868A2 /* libPods-iOS_3D_ClusterAnnotation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS_3D_ClusterAnnotation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2DB24A78756C9808BF704BF /* Pods-iOS_3D_ClusterAnnotation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_3D_ClusterAnnotation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_3D_ClusterAnnotation/Pods-iOS_3D_ClusterAnnotation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,21 +82,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F8105B1DB60ADB00D4804D /* JavaScriptCore.framework in Frameworks */,
 				811D545B1D4F5AED00773BCC /* libc++.tbd in Frameworks */,
 				811D54591D4F5AE700773BCC /* libstdc++.6.0.9.tbd in Frameworks */,
 				811D54571D4F5AE000773BCC /* libz.tbd in Frameworks */,
-				74F464691B4A2E1B001B55AA /* Security.framework in Frameworks */,
-				81B61EB91D64108700415DAD /* AMapFoundationKit.framework in Frameworks */,
-				74F4646C1B4A2E1B001B55AA /* SystemConfiguration.framework in Frameworks */,
-				74F4646D1B4A2E1B001B55AA /* CoreTelephony.framework in Frameworks */,
-				74F4646E1B4A2E1B001B55AA /* CoreLocation.framework in Frameworks */,
-				81B61EBA1D64108700415DAD /* AMapSearchKit.framework in Frameworks */,
-				81B61EBB1D64108700415DAD /* MAMapKit.framework in Frameworks */,
-				74F4646F1B4A2E1B001B55AA /* OpenGLES.framework in Frameworks */,
-				74F464701B4A2E1B001B55AA /* QuartzCore.framework in Frameworks */,
-				74F464711B4A2E1B001B55AA /* CoreGraphics.framework in Frameworks */,
-				74F464721B4A2E1B001B55AA /* Foundation.framework in Frameworks */,
-				74F464731B4A2E1B001B55AA /* UIKit.framework in Frameworks */,
+				DB8E522C9305FFAB452BD2A8 /* libPods-iOS_3D_ClusterAnnotation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,16 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		447CD1301035625F89969BEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81F8105A1DB60ADA00D4804D /* JavaScriptCore.framework */,
+				C35C23E3B703260ECBC868A2 /* libPods-iOS_3D_ClusterAnnotation.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		747B94301B4688AE00474F78 = {
 			isa = PBXGroup;
 			children = (
-				81B61EBC1D6410B800415DAD /* AMap.bundle */,
 				811D545A1D4F5AED00773BCC /* libc++.tbd */,
 				811D54581D4F5AE700773BCC /* libstdc++.6.0.9.tbd */,
 				811D54561D4F5AE000773BCC /* libz.tbd */,
 				747B943B1B4688AE00474F78 /* iOS_3D_ClusterAnnotation */,
 				747B94551B4688AE00474F78 /* iOS_3D_ClusterAnnotationTests */,
 				747B943A1B4688AE00474F78 /* Products */,
+				77818163462082BCAB563E2C /* Pods */,
+				447CD1301035625F89969BEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,18 +150,6 @@
 		747B943C1B4688AE00474F78 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				81B61EB61D64108700415DAD /* AMapFoundationKit.framework */,
-				81B61EB71D64108700415DAD /* AMapSearchKit.framework */,
-				81B61EB81D64108700415DAD /* MAMapKit.framework */,
-				74F4644D1B4A2095001B55AA /* Security.framework */,
-				74F464471B4A206C001B55AA /* SystemConfiguration.framework */,
-				74F464131B4A1D2F001B55AA /* CoreTelephony.framework */,
-				74F464111B4A1D27001B55AA /* CoreLocation.framework */,
-				74F4640F1B4A1D1E001B55AA /* OpenGLES.framework */,
-				74F4640D1B4A1D0D001B55AA /* QuartzCore.framework */,
-				74F4640B1B4A1CFD001B55AA /* CoreGraphics.framework */,
-				74F464091B4A1CF2001B55AA /* Foundation.framework */,
-				74F464071B4A1CE8001B55AA /* UIKit.framework */,
 				747B943D1B4688AE00474F78 /* Info.plist */,
 				747B943E1B4688AE00474F78 /* main.m */,
 			);
@@ -270,6 +238,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		77818163462082BCAB563E2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB24A78756C9808BF704BF /* Pods-iOS_3D_ClusterAnnotation.debug.xcconfig */,
+				56CE7FDE07DAF03313FA3AAA /* Pods-iOS_3D_ClusterAnnotation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 747B945C1B4688AE00474F78 /* Build configuration list for PBXNativeTarget "iOS_3D_ClusterAnnotation" */;
 			buildPhases = (
+				F7D34CBF83F261B3EFA4BED4 /* [CP] Check Pods Manifest.lock */,
 				747B94351B4688AE00474F78 /* Sources */,
 				747B94361B4688AE00474F78 /* Frameworks */,
 				747B94371B4688AE00474F78 /* Resources */,
+				E4D7713573E745E51A51AFA8 /* [CP] Embed Pods Frameworks */,
+				DC4E61DC4AE8E6C4CFA1DAD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,11 +294,12 @@
 		747B94311B4688AE00474F78 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = FENGSHENG;
 				TargetAttributes = {
 					747B94381B4688AE00474F78 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = YMJ372W38W;
 					};
 					747B94511B4688AE00474F78 = {
 						CreatedOnToolsVersion = 6.4;
@@ -350,7 +331,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81B61EBD1D6410B800415DAD /* AMap.bundle in Resources */,
 				747B944D1B4688AE00474F78 /* LaunchScreen.xib in Resources */,
 				747B944A1B4688AE00474F78 /* Images.xcassets in Resources */,
 			);
@@ -364,6 +344,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DC4E61DC4AE8E6C4CFA1DAD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS_3D_ClusterAnnotation/Pods-iOS_3D_ClusterAnnotation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4D7713573E745E51A51AFA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS_3D_ClusterAnnotation/Pods-iOS_3D_ClusterAnnotation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7D34CBF83F261B3EFA4BED4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		747B94351B4688AE00474F78 /* Sources */ = {
@@ -427,8 +455,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -471,8 +501,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -497,36 +529,38 @@
 		};
 		747B945D1B4688AE00474F78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DB24A78756C9808BF704BF /* Pods-iOS_3D_ClusterAnnotation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = YMJ372W38W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iOS_3D_ClusterAnnotation",
 				);
 				INFOPLIST_FILE = iOS_3D_ClusterAnnotation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Peking.1401210730.FengSheng.iOS-3D-ClusterAnnotation";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-3D-ClusterAnnotation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		747B945E1B4688AE00474F78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56CE7FDE07DAF03313FA3AAA /* Pods-iOS_3D_ClusterAnnotation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = YMJ372W38W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iOS_3D_ClusterAnnotation",
 				);
 				INFOPLIST_FILE = iOS_3D_ClusterAnnotation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Peking.1401210730.FengSheng.iOS-3D-ClusterAnnotation";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-3D-ClusterAnnotation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
